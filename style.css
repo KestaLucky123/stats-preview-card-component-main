@@ -1,0 +1,118 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'inter', sans-serif;
+    background: hsl(233, 47%, 7%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.card-wrapper {
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.image {
+    position: relative;
+}
+.image::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(277, 64%, 61%, .6);
+}
+.first-card{
+    padding: 13%;
+}
+.header{
+    color: white; 
+    font-weight: 700;
+    padding-bottom: 22px;  
+}
+.header span{
+    color: hsl(277, 64%, 61%);
+}
+
+.paragraph{
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.8;
+}
+.stat-box{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+.stat-box p.num {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.stat-box p{
+    color: hsla(0, 0%, 100%, 0.6 )
+
+}
+@media only screen and (max-width: 768px) and (min-width: 426px){
+    body{
+        font-size: 12px;
+    }
+    .first-card{
+        padding: 12%;
+    }
+    .header{
+        font-size: 22px;
+    }
+    .stat-box{
+        padding-top: 30px;
+    }
+    .stat-box p.num{
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    body {
+        text-align: center;
+    }
+    .card-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        order: -1;
+
+    }
+    .first-card {
+        padding: 12% 8%;
+        line-height: 1.4;
+    }
+    .stat-box {
+        flex-direction: column;
+    }
+
+}
+    
